@@ -1,0 +1,154 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #eef2f7, #d9e4f5);
+
+  /* CENTER FIX */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+
+/* Main app container */
+.app {
+  width: 85%;
+  max-width: 1100px;
+  margin-top: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+/* Header section */
+.header {
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  padding: 18px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Content section */
+.section {
+  padding: 25px;
+}
+
+/* Welcome title */
+.section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #ffffff;
+}
+
+/* Table header */
+thead {
+  background-color: #f1f5f9;
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #1f2937;
+  border-bottom: 2px solid #c7d2fe;
+}
+
+/* Table rows */
+tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Hover effect */
+tbody tr:hover {
+  background-color: #eef2ff;
+}
+
+/* Table cells */
+td {
+  padding: 12px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Empty data message (optional future use) */
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border: none;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #4f46e5;
+  }
+}
+.footer {
+  background-color: #f1f5f9;
+  text-align: center;
+  padding: 14px;
+  font-size: 14px;
+  color: darkgreen;
+  border-top: 1px solid #e5e7eb;
+}
+    
